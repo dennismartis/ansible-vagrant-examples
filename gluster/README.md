@@ -13,10 +13,10 @@ This project creates a distributed filesystem on two servers using [GlusterFS](h
 When Vagrant is finished provisioning the VMs with Ansible, run the following two commands to confirm that Gluster is operating nominally:
 
     # Get status for the Gluster cluster.
-    $ ansible gluster -i inventory -a "gluster peer status" -s
+    $ ansible gluster -i inventory -a "gluster peer status" -b
     
     # Get volume info for the Gluster cluster.
-    ansible gluster -i inventory -a "gluster volume info" -s
+    ansible gluster -i inventory -a "gluster volume info" -b
 
 You can also do the following to confirm that files are being replicated/distributed correctly:
 
@@ -30,4 +30,4 @@ You should see the `test` file you created in step 2; this means Gluster is work
 
 ## About the Author
 
-This project was created by [Jeff Geerling](http://jeffgeerling.com/) as an example for [Ansible for DevOps](http://www.ansiblefordevops.com/).
+This project was created by [Jeff Geerling](https://www.jeffgeerling.com/) as an example for [Ansible for DevOps](https://www.ansiblefordevops.com/).
